@@ -55,7 +55,7 @@ def option_rock ():
         print("\n You decided to throw antother rock,as\n"
               "if the first rock thrown did much damage. The rock\n"
               "flew well over the monster head. You missed.\n"
-              "\n\n You died! Good night!?n")
+              "\n\n You died! Good night!?\n")
         time.sleep(1)
         print (requiered)
         intro ()
@@ -71,6 +71,7 @@ def option_rock ():
         intro ()
 
 def option_run_right ():
+    sword=0
     print("\n You run to the right side and concead behind a rock.\n"
           "Besides that you feel something cold and smooth. It is a sword.\n"
           "You will: \n")
@@ -81,7 +82,7 @@ def option_run_right ():
     if choice in answer_A:
         sword=1     #add a sword
     else:
-            sword=0
+        sword=0
     print("\n What do yo do nexst?\n")
     time.sleep (1)
     print("A. Hide in silence\n"
@@ -106,12 +107,13 @@ def option_run_right ():
             choice=input(">>>  ")
             if choice in answer_A:
                 tooth=1
-                option_win()
+                option_win(1,0)
             elif choice in answer_B:
-                chain=1
-                option_win()
+                chein=1
+                option_win(0,1)
+                option_win(0,1)
             else:
-                option_win()
+                option_win(0,0)
         else: #if the user didn`t grab the sword
             print ("\nYou should have pick up that sword.\n"
                    "you`re defenseless.\n\nYou died! Good night!\n")
@@ -127,7 +129,10 @@ def option_run_right ():
     else:
         print(requiered)
         intro ()
-def option_win ():
+def option_win (grabtoothe,grabchein):
+    toothe = grabtoothe
+    chein = grabchein
+
     print ("\nThe sword feeld you to a stature. The\n"
            "statue holds an oven hand in front of it. You will: \n")
     time.sleep(1)
@@ -140,34 +145,49 @@ def option_win ():
             print("\nA light blind you. When you can see\n"
                   "dedication you lie in your bed.\n"
                   "Fin")
-        if toothe>0:
+            time.sleep(1)
+            print(requiered)
+            intro()
+        elif toothe>0:
             print ("\mYour body starts to hurt. In pain you lose the consciousness of being aware.\n"
                    "When you wake up again you realize that you\n"
                    "are now the monster.\n"
                    "Fin")
-        if chein >0:
+            time.sleep(1)
+            print(requiered)
+            intro()
+        elif chein >0:
             print("\nThe chain in your hand beginn to shin.\n"
                   "A voci beginn to tork to you: 'You give ab the sword\n"
                   "and hold the chain so you will becam a Gardian\n"
                   "of this world\n'"
                   "Fin")
-    if choice in answer_B:
+            time.sleep(1)
+            print(requiered)
+            intro()
+    elif choice in answer_B:
         if toothe >0:
             print ("\nA deep style speaks to you:\n"
-           "'You have welt the tooth so you are a sleepwalker\n"
-           "from now on. You will lif in this world from now on.'\n"
-           "Fin")
-        elif toothe <= 0:
-            option_win
-    if choice in answer_C:
+                    "'You have welt the tooth so you are a sleepwalker\n"
+                    "from now on. You will lif in this world from now on.'\n"
+                    "Fin")
+            time.sleep(1)
+            print(requiered)
+            intro()
+        else:
+            option_win()
+    elif choice in answer_C:
         if chein>0:
             print("\nA deep style speeks to you:' So you have\n"
-              "wolfed the chain then you are probably a world wanderer'\n"
-              "In the nexs moment you lie un your bed.\n"
-              "Next to you ther is the sword and around your neck is the chain.\n"
-              "Fin")
-        elif chein <= 0:
-            option_win
+                  "wolfed the chain then you are probably a world wanderer'\n"
+                  "In the nexs moment you lie un your bed.\n"
+                  "Next to you ther is the sword and around your neck is the chain.\n"
+                  "Fin")
+            time.sleep(1)
+            print(requiered)
+            intro()
+        else:
+            option_win()
     else:
       print (requiered)
       intro ()
