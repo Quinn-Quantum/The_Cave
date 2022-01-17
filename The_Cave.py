@@ -158,16 +158,16 @@ def option_win ():
            "from now on. You will lif in this world from now on.'\n"
            "Fin")
         elif toothe <= 0:
-            option_win
+            option_win()
     if choice in answer_C:
-        if chein==0:
+        if chein==1:
             print("\nA deep style speeks to you:' So you have\n"
               "wolfed the chain then you are probably a world wanderer'\n"
               "In the nexs moment you lie un your bed.\n"
               "Next to you ther is the sword and around your neck is the chain.\n"
               "Fin")
         elif chein <= 0:
-            option_win
+            option_win()
     else:
       print (requiered)
       intro ()
