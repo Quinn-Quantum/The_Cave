@@ -160,7 +160,7 @@ def option_win ():
         elif toothe <= 0:
             option_win
     if choice in answer_C:
-        if chein>0:
+        if chein==0:
             print("\nA deep style speeks to you:' So you have\n"
               "wolfed the chain then you are probably a world wanderer'\n"
               "In the nexs moment you lie un your bed.\n"
