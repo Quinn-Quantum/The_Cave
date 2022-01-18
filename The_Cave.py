@@ -168,7 +168,6 @@ def option_win (grabtoothe,grabchein):
     elif choice in answer_B:
         if toothe >0:
             print ("\nA deep style speaks to you:\n"
-<<<<<<< HEAD
                     "'You have welt the tooth so you are a sleepwalker\n"
                     "from now on. You will lif in this world from now on.'\n"
                     "Fin")
@@ -188,21 +187,6 @@ def option_win (grabtoothe,grabchein):
             print(requiered)
             intro()
         else:
-=======
-           "'You have welt the tooth so you are a sleepwalker\n"
-           "from now on. You will lif in this world from now on.'\n"
-           "Fin")
-        elif toothe <= 0:
-            option_win()
-    if choice in answer_C:
-        if chein==1:
-            print("\nA deep style speeks to you:' So you have\n"
-              "wolfed the chain then you are probably a world wanderer'\n"
-              "In the nexs moment you lie un your bed.\n"
-              "Next to you ther is the sword and around your neck is the chain.\n"
-              "Fin")
-        elif chein <= 0:
->>>>>>> 4faef8936741aa3db84d59f0e8ca6f10bce2ebda
             option_win()
     else:
       print (requiered)
